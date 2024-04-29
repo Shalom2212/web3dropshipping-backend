@@ -9,9 +9,10 @@ export class SupplierDetailsService {
   async create(createSupplierDetailDto: CreateSupplierDetailDto) {
     const {
       productName,
+      productPrice,
       supplierName,
       supplierWalletAddress,
-      MaxContractPeriod,
+      maxContractPeriod,
       supplierPercentage,
       totalNumberOfProduct,
     } = createSupplierDetailDto;
@@ -19,9 +20,10 @@ export class SupplierDetailsService {
     return await this.prisma.supplierData.create({
       data: {
         productName,
+        productPrice,
         supplierName,
         supplierWalletAddress,
-        MaxContractPeriod,
+        maxContractPeriod,
         supplierPercentage,
         totalNumberOfProduct,
       },

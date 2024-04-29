@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Res,
 } from '@nestjs/common';
 import { DeployInBlockchainService } from './deploy-in-blockchain.service';
 import { CreateDeployInBlockchainDto } from './dto/create-deploy-in-blockchain.dto';

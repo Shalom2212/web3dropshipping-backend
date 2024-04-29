@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Res } from '@nestjs/common';
 import { CreateDeployInBlockchainDto } from './dto/create-deploy-in-blockchain.dto';
 import { UpdateDeployInBlockchainDto } from './dto/update-deploy-in-blockchain.dto';
 import * as solc from 'solc';
@@ -77,7 +77,8 @@ export class DeployInBlockchainService {
       createDeployInBlockchainDto.numberofproducts,
       createDeployInBlockchainDto.contractdays,
     );
-    return { address: await address, abi: output.abi };
+
+    return { address: address, abi: output.abi };
   }
 
   findAll() {

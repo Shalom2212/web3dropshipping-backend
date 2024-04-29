@@ -11,9 +11,10 @@ datasource db {
 model SupplierData {
   id Int @default(autoincrement()) @id
   productName String
+  productPrice String
   supplierName String
   supplierWalletAddress String
-  MaxContractPeriod Int
+  maxContractPeriod Int
   supplierPercentage Int
   totalNumberOfProduct Int
 }

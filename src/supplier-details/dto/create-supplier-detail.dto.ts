@@ -1,8 +1,9 @@
 export class CreateSupplierDetailDto {
   productName: string;
+  productPrice: string;
   supplierName: string;
   supplierWalletAddress: string;
-  MaxContractPeriod: number;
+  maxContractPeriod: number;
   supplierPercentage: number;
   totalNumberOfProduct: number;
 }
