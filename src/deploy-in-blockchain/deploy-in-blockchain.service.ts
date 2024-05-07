@@ -5,6 +5,13 @@ import * as solc from 'solc';
 import { ethers } from 'ethers';
 import { contractCode } from './contracts/smartContract';
 
+const rpcURL = 'https://1rpc.io/sepolia';
+const mywalletPrivateKey =
+  'df47db66519996bdf4eb9efbda1fe71ce914b05836e25216a4824e6459892215';
+// console.log('rpcURl: ' + rpcURL);
+// console.log('Walletprivatekey: ' + mywalletPrivateKey);
+// console.log(process.env.DATABASE_URL);
+
 function compileContract() {
   const input = {
     language: 'Solidity',
@@ -38,12 +45,9 @@ async function deployContract(
   numberOfProduct: number,
   contractDays: number,
 ) {
-  const provider = new ethers.JsonRpcProvider('http://localhost:7545');
+  const provider = new ethers.JsonRpcProvider(rpcURL);
 
-  const signer = new ethers.Wallet(
-    '0x7fc9aaaafd13a98fe890e43b4437c01277f0378f539f1b117e227d41934e7617',
-    provider,
-  );
+  const signer = new ethers.Wallet(mywalletPrivateKey, provider);
 
   const factory = new ethers.ContractFactory(abi, bytecode, signer);
 

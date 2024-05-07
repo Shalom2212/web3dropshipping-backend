@@ -18,3 +18,12 @@ model SupplierData {
   supplierPercentage Int
   totalNumberOfProduct Int
 }
+
+model ProductsData {
+  id Int @default(autoincrement()) @id
+  name String
+  description String
+  url String
+  price Int
+  blockchainaddr String
+}
