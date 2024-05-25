@@ -24,6 +24,6 @@ model ProductsData {
   name String
   description String
   url String
-  price Int
+  price String
   blockchainaddr String
 }

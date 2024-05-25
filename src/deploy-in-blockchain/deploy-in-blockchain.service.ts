@@ -5,12 +5,15 @@ import * as solc from 'solc';
 import { ethers } from 'ethers';
 import { contractCode } from './contracts/smartContract';
 
-const rpcURL = 'https://1rpc.io/sepolia';
-const mywalletPrivateKey =
-  'df47db66519996bdf4eb9efbda1fe71ce914b05836e25216a4824e6459892215';
+// const rpcURL = 'https://1rpc.io/sepolia';
+// const mywalletPrivateKey =
+//   'df47db66519996bdf4eb9efbda1fe71ce914b05836e25216a4824e6459892215';
 // console.log('rpcURl: ' + rpcURL);
 // console.log('Walletprivatekey: ' + mywalletPrivateKey);
 // console.log(process.env.DATABASE_URL);
+const rpcURL = 'http://127.0.0.1:7545';
+const mywalletPrivateKey =
+  '0xc391e67f17f3342d5875d35cb8d93f30737054994fa013caf28d66721e1a3536';
 
 function compileContract() {
   const input = {

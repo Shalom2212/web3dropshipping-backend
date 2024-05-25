@@ -2,6 +2,6 @@ export class CreateProductDetailDto {
   name: string;
   description: string;
   url: string;
-  price: number;
+  price: string;
   blockchainaddr: string;
 }
